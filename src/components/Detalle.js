@@ -41,8 +41,8 @@ class Detalle extends Component{
     render(){
                 
         const signoEncontrado = this.state.signo;        
-              
-
+        const listaMeses = {1:'Enero',2:'Febrero',3:'Marzo',4:'Abril',5:'Mayo',6:'Junio',7:'Julio',8:'Agosto',9:'Setiembre',10:'Octubre',11:'Noviembre',12:'Diciembre'};                      
+        
         if (Object.keys(signoEncontrado).length === 0) {
             return ("");
         }        
@@ -68,33 +68,13 @@ class Detalle extends Component{
                             </Row>
                             <Row >
                                 <Col><h2>Simbolo: {signoEncontrado.simbolo}</h2>
+                                
                                 </Col>
                             </Row>
                             <Row>
                                 <Col>Mes: <br></br>
-                                {(signoEncontrado.meses.includes(1))?'Enero ':'' /*Sé que es rustico, pero no hay tiempo*/}                                 
-                                {(signoEncontrado.meses[0]===2)?'Febrero ':''} 
-                                {(signoEncontrado.meses[1]===2)?'Febrero ':''} 
-                                {(signoEncontrado.meses[0]===3)?'Marzo ':''} 
-                                {(signoEncontrado.meses[1]===3)?'Marzo ':''} 
-                                {(signoEncontrado.meses[0]===4)?'Abril ':''} 
-                                {(signoEncontrado.meses[1]===4)?'Abril ':''} 
-                                {(signoEncontrado.meses[0]===5)?'Mayo ':''} 
-                                {(signoEncontrado.meses[1]===5)?'Mayo ':''} 
-                                {(signoEncontrado.meses[0]===6)?'Junio ':''} 
-                                {(signoEncontrado.meses[1]===6)?'Junio ':''} 
-                                {(signoEncontrado.meses[0]===7)?'Julio ':''} 
-                                {(signoEncontrado.meses[1]===7)?'Julio ':''} 
-                                {(signoEncontrado.meses[0]===8)?'Agosto ':''} 
-                                {(signoEncontrado.meses[1]===8)?'Agosto ':''} 
-                                {(signoEncontrado.meses[0]===9)?'Setiembre ':''} 
-                                {(signoEncontrado.meses[1]===9)?'Setiembre ':''} 
-                                {(signoEncontrado.meses[0]===10)?'Octubre ':''} 
-                                {(signoEncontrado.meses[1]===10)?'Octubre ':''} 
-                                {(signoEncontrado.meses[0]===11)?'Noviembre ':''} 
-                                {(signoEncontrado.meses[1]===11)?'Noviembre ':''} 
-                                {(signoEncontrado.meses[0]===12)?'Diciembre ':''} 
-                                {(signoEncontrado.meses[1]===12)?'Diciembre ':''} 
+                                {listaMeses[signoEncontrado.meses[0]]}<br></br>
+                                {listaMeses[signoEncontrado.meses[1]]}
 
                                 </Col>
                             </Row>
