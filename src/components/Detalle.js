@@ -67,9 +67,7 @@ class Detalle extends Component{
                                 <Col style={{color:'grey'}}>Elemento:   {signoEncontrado.elemento}</Col>
                             </Row>
                             <Row >
-                                <Col><h2>Simbolo: {signoEncontrado.simbolo}</h2>
-                                
-                                </Col>
+                                <Col><h2>Simbolo: {signoEncontrado.simbolo}</h2></Col>
                             </Row>
                             <Row>
                                 <Col>Mes: <br></br>
